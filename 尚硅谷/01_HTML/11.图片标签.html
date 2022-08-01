@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        图片标签用于在当前页面中引入一个外部图片
+        使用img标签,img标签是一个自结束标签
+        img元素属于替换元素(在块元素与行内元素之间,具有两种元素的特点)
+        属性
+            src属性指定的是外部图片的地址
+            alt属性为图片描述,一般在图片无法加载时显示
+                搜索引擎会根据alt中的内容(关键词)识别图片,如果不写alt属性则图片不会被搜索引擎所收集
+            width图片的宽度(单位像素)
+            height图片的高度
+                如果高度和宽度只修改了其中一个,则另一个会等比缩放
+            注意:
+                一般情况下在pc端,不建议修改图片大小,需要多大图片就使用多大图片
+                在移动端经常需要对图片进行缩放(大图缩小)
+
+        图片格式:
+            jpeg(jpg) 支持颜色丰富,不支持透明效果及动图 一般显示照片
+            gif 支持颜色较少,支持简单透明效果及动图 颜色单一的图片,动图
+            png 支持颜色丰富,支持复杂透明,不支持动图 颜色丰富,复杂透明图片
+            webp 谷歌新推出的网页格式,具备了其他格式的优点且较小,但是兼容性不好
+            
+            选择标准:效果一样,用小的 效果不一样,用效果好的
+        
+        base64 将图片使用base64编码以字符的形式引入图片,一般在需要将图片与网页同时加载完成时使用
+    -->
+    <img src="./sourse/1.gif" width="200" alt="跳">
+    <img src="没有图片" alt="这里没有图片">
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>语义化标签</title>
+</head>
+<body>
+    <!--
+        html负责网页结构,所以在使用时应注意其标签的语义,而不是样式
+
+        在界面中独占一行的元素叫块元素
+        在界面中不会独占一行的元素叫行内元素
+    -->
+
+    <!--
+        标题标签(块元素)
+            html中有六级标题为:h1-h6
+            h1-h6以主要性排序,其中h1最为主要
+            h1在网页中的重要性仅次于title
+            一般情况下一个界面只有一个h1且只使用到h1-h3,h4-h6较少使用
+    -->
+    <h1>一级标题</h1>
+    <h2>二级标签</h2>
+    <h3> 三级标题</h3>
+    <h4> 四级标题</h4>
+    <h5> 五级标题</h5>
+    <h6> 六级标题</h6>
+
+    <!--
+        hgroup标签用于标题的分组,可将相关的标题分为同一组
+    -->
+    <hgroup>
+        <h1>标题1</h1>
+        <h2>标题2</h2>
+    </hgroup>
+
+    <!--
+        段落标签(块元素)
+            表示一个段落
+    -->
+    <p>一个段落</p>
+    <!--
+        em标签表示语调加重,字体为斜体(行内元素)
+        strong标签表示强调,体现重要内容,字体加粗(行内元素)
+        blockquote标签用于长引用,体现为缩进(块元素)
+        q表示弱引用,体现为自动添加引号(行内引用)
+    -->
+    <p>Hello <em>world</em> !</p>
+    <p>Hello <strong>World</strong> !</p>
+    <p>子曰:</p>
+    <blockquote>学而时习之,不亦说乎</blockquote>
+    <p>子曰:<q>学而时习之,不亦说乎</q></p>
+
+    <!--
+        br标签表示界面中换行
+    -->
+    <br>
+    <p>第一段</p>
+    <br>
+    <br>
+    <p>第二段</p>
+</body>
+</html>
