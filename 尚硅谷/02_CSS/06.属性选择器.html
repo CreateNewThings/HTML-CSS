@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            [属性名] 选择含有指定属性的元素
+            [属性名=属性值] 选择含有指定元素和属性值的元素
+            [属性名^=属性名] 选择属性值以指定值开头的元素
+            [属性名$=属性值] 选择属性值以指定值结尾的元素
+            [属性名*=属性值] 选择属性值中含有某值的元素
+        */
+        p[title]{
+            color: aquamarine;
+        }
+        p[class = abc]{
+            color: blue;
+        }
+        p[class ^= d]{
+            color: rgb(196, 127, 37);
+        }
+        p[class $= i]{
+            color: rgb(83, 158, 48);
+        }
+        p[class *= b]{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <p title="a">这是一个段落</p>
+    <p title="b">这是一个段落</p>
+    <p title="c">这是一个段落</p>
+    <p class="abc">这是一个段落</p>
+    <p class="def">这是一个段落</p>
+    <p class="ghi">这是一个段落</p>
+    <p>这是一个段落</p>
+</body>
+</html>

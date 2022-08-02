@@ -7,14 +7,45 @@
     <title>Document</title>
     <style>
         /* 
-            为div的子元素span设置一个字体颜色红色
-            (为div直接包含的span设置字体颜色红色)
+            为div的子元素span设置一个字体颜色
+            (为div直接包含的span设置字体颜色)
             子元素选择器
                 作用:选中指定父元素的指定子元素
                 语法:父元素 > 子元素
         */
-        div > span{
+        /* div > span{
             color: red;
+        } */
+
+        /* .box > span{
+            color: orange;
+        } */
+
+        /* 
+            后代元素选择器:
+                作用:选中指定元素内的指定后代元素
+                语法:祖先 后代{}
+        */
+        /* div span{
+            font-size: 20px;
+        } */
+
+        /* .box span{
+            font-size: 50px;
+        } */
+
+        /* 
+            兄弟选择器
+                作用:选择下面的兄弟元素
+                语法:前一个兄弟元素 + 下一个兄弟元素 选择下一个兄弟元素
+                    前一个兄弟元素 ~ 下一个兄弟元素标签 选择下面所有的兄弟元素
+        */
+        p + span{
+            font-style: oblique;
+        }
+
+        p ~ span{
+            color: orange;
         }
     </style>
 </head>
@@ -32,19 +63,23 @@
 
         兄弟元素 拥有相同父元素的元素是兄弟元素
      -->
-    <div>
-
+    <div class="box">
         我是一个div
-
         <p>
             我是div中的p元素
             <br>
             <span>我是p元素中的span</span>
         </p>
-
+        <span>我是div中的span元素</span> <br>
+        <span>我是div中的span元素</span> <br>
+        <span>我是div中的span元素</span> <br>
         <span>我是div中的span元素</span> 
-
     </div>
 
+    <div>
+        <span>
+            非目标span
+        </span>
+    </div>
 </body>
 </html>
