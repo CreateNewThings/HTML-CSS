@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <style>
+        body{
+            height: 2000px;
+        }
+
+        nav{
+            width: 1210px;
+            height: 50px;
+            background-color: #e8e7e3;
+            margin: 100px auto;
+
+            /* 
+                粘滞定位
+                    元素的position属性设置为sticky
+                    粘滞定位和相对定位的特点基本一致,不同的是粘滞定位可以在元素到达某个位置时将其固定
+
+            */
+
+            position: sticky;
+
+            top: 10px;
+        }
+
+        .item{
+            float: left;
+            padding: 0px 32.57px;
+            /* 设置行高(可以垂直居中文字) */
+            line-height: 50px;
+            font-size: 22px;
+            color: #878787;
+        }
+
+        .item:hover{
+            background-color: #3f3f3f;
+            color: #e8e7e3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="javascript:;" class="item">HTML/CSS</a>
+        <a href="javascript:;" class="item">Brower Side</a>
+        <a href="javascript:;" class="item">Server Side</a>
+        <a href="javascript:;" class="item">Programming</a>
+        <a href="javascript:;" class="item">XML</a>
+        <a href="javascript:;" class="item">Web Building</a>
+        <a href="javascript:;" class="item">Reference</a>   
+    </nav>
+</body>
+</html>
