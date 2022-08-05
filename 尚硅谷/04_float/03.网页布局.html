@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 提取相同属性,节省空间 */
+        header,main,footer{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 设置头部 */
+        header{
+            height: 150px;
+            background-color: orange;
+        }
+
+        /* 设置主体 */
+        main{
+            height: 500px;
+            background-color: #bfa;
+            margin: 10px auto;
+        }
+
+        /* 精简代码 */
+        nav,article,aside{
+            float: left;
+            height: 100%;
+        }
+
+        /* 设置左侧导航 */
+        nav{
+            float: left;
+            width: 200px;
+            height: 100%;
+            background-color: aqua;
+        }
+
+        /* 设置中间内容 */
+        article{
+            float: left;
+            width: 580px;
+            height: 100%;
+            background-color: cadetblue;
+            margin: 0 10px;
+        }
+
+        /* 设置右侧边栏 */
+        aside{
+            float: left;
+            width: 200px;
+            height: 100%;
+            background-color: wheat;
+        }
+
+        /* 设置底部 */
+        footer{
+            height: 150px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 创建一个头部 -->
+    <header></header>
+
+    <!-- 创建网页的主体 -->
+    <main>
+        <!-- 左侧导航 -->
+        <nav></nav>
+
+        <!-- 中间的内容 -->
+        <article></article>
+
+        <!-- 右边的边栏 -->
+        <aside></aside>
+    </main>
+
+    <!-- 创建网页的底部 -->
+    <footer></footer>
+
+</body>
+</html>

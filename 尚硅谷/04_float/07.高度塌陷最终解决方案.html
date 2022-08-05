@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: 10px red solid;
+        }
+
+        /* 
+            使用::after伪元素在box1的最后添加一个元素,并对其添加clear属性,
+            令其摆脱float影响,撑起父元素,相当于使用html在页面结构中添加一个元素
+        */
+        .box1::after{
+            /* ::after默认是行内元素,将其转变为块元素,使其可以撑起父元素 */
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
