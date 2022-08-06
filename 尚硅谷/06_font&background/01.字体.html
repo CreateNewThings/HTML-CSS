@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,18 @@
     <style>
         /* 
             font-face可以将服务器中的字体直接提供给用户取使用
+                问题
+                    加载速度的问题
+                    版权的问题
         */
         @font-face {
             /* 指定字体的名字 */
             font-family: 'myfont';
             /* 服务器中字体的路径 */
-            src: url();
+            src: url(./font/font.ttf);
         }
 
-        p{
+        p {
             /* 
                 字体相关的样式
                     color 用来设置字体颜色
@@ -36,13 +40,15 @@
             */
             color: orange;
             font-size: 20px;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: myfont, 'Courier New', Courier, monospace;
         }
     </style>
 </head>
+
 <body>
     <p>
         真不错,Lorem ipsum dolor sit amet.
     </p>
 </body>
+
 </html>

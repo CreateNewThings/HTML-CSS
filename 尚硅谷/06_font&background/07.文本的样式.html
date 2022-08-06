@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            border: 1px red solid;
+
+            /* 
+                text-align 文本的水平对齐
+                    可选值
+                        left 左侧对齐
+                        right 右侧对齐
+                        center 居中对齐
+                        justify 两端对齐
+            */
+            text-align: justify;
+        }
+
+        .box1{
+            width: 500px;
+            border: 1px red solid;
+            margin: 10px 0;
+            font-size: 50px;
+        }
+
+        span{
+            font-size: 20px;
+            border: 1px blue solid;
+
+            /* 
+                vertical-align 设置元素
+                    可选值
+                        baseline 默认值 与基线对齐
+                        top 顶部对齐
+                        boottom 底部对齐
+                        middle 居中对齐 (子元素的中线与x的中线对齐)
+                        值 正值向上移,负值向下移
+            */
+            vertical-align:middle;
+        }
+
+        p{
+            width: 500px;
+            border: 1px red solid;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        p img{
+            /* 通过设置vertical-align != baseline对齐图片 */
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius facilis aspernatur nisi id at asperiores, recusandae laboriosam nobis quaerat cum voluptatibus, consequuntur suscipit soluta fuga quas molestias, repellendus necessitatibus perspiciatis.
+    </div>
+
+    <div class="box1">
+        今天天气Hello x
+        <span>真不错 Hello</span>
+    </div>
+
+    <p><img src="../00_exercise/img/01/1.webp" alt=""></p>
+</body>
+</html>

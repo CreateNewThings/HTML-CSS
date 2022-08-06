@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid orange;
+
+            /* 
+                font-weight 字重 字体加粗
+                    可选值
+                        normal 默认,不加粗
+                        bold 加粗
+                        100-900 九个级别(基本没有用)
+            */
+            font-weight: normal;
+
+            /* 
+                font-style 字体的风格
+                    normal 默认,正常
+                    italic 斜体
+            */
+            font-style: normal;
+
+             /* line-height等属性 在font写前可能会被font中的相应属性覆盖 */
+             line-height: 3;
+
+           /* 
+                font 可以设置字体相关的所有属性
+                    语法:font:(字体风格 字重) 字体大小(/行高) 字体族
+                        字体风格 字重 行高 可以省略 如果省略则使用默认值
+            */
+           font: bold italic 50px 'Courier New', Courier, monospace ; 
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div>Hello World!</div>
+</body>
+</html>
