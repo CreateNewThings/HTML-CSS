@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            display: block;
+            width: 200px;
+            height: 60px;
+            font: 30px/60px "微软雅黑";
+            color: #747171;
+            text-align: center;
+            text-decoration: none;
+            background-image: url(./img/08/ok.png);
+        }
+
+        a:hover{
+            background-image: url(./img/08/ok1.png);
+            color: #464646;
+        }
+
+        a:active{
+            background-image: url(./img/08/OK2.png);
+            color: #000;
+        }
+
+        /* 
+            图片属于网页中的外部资源,外部资源都需要浏览器单独发送请求加载
+                浏览器加载是按需加载的,在练习中link会先加载而hover和active会在指定状态触发时才会加载
+                可能会产生闪烁现象
+        */
+    </style>
+</head>
+<body>
+    <a href="JavaScript:;">确定</a>
+</body>
+</html>
