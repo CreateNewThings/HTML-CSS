@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 重置样式表 -->
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <!-- 引入图标字体 -->
+    <link rel="stylesheet" href="../06_font&background/font/fontawesome/css/all.css">
+    <style>
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        body{
+            background-color: #f4f4f4;
+            font: 12px/30px "微软雅黑";
+        }
+
+        .top-bar-wrapper{
+            width: 100%;
+            background-color: #e3e4e5;
+        }
+
+        .top-bar{
+            width: 1190px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .top-bar a,
+        .top-bar span,
+        .top-bar i{
+            color: #999;
+            text-decoration: none;
+        }
+
+        .top-bar a:hover,
+        .top-bar a.hightlight{
+            color: #f00;
+        }
+
+        .location{
+            float: left;
+        }
+
+        .current-city{
+            overflow: hidden;
+            position: relative;
+            padding-right: 10px;
+        }
+
+        .current-city:hover{
+            overflow: visible;
+            background-color: #ffffff;
+        }
+
+        .current-city i{
+            color: #f10215;
+            margin-left: 10px;
+        }
+
+        .current-city .loctionHidden{
+            width: 300px;
+            padding: 10px;
+            box-sizing: content-box;
+            background-color: #fff;
+            position: absolute;
+            top: 30px;
+        }
+
+        .loctionHidden div{
+            width: 60px;
+            float: left;
+        }
+
+        .loctionHidden a{
+            display: block;
+            font: 12px/24px "微软雅黑";
+            width: 40px;
+            text-align: center;
+        }
+
+        .loctionHidden div:not(:nth-child(1)) a:hover{
+            background-color: #f4f4f4;
+        }
+
+        .loctionHidden div:nth-child(1) a{
+            background-color: #f10215;
+            color: #ffffff;
+        }
+
+        .shortcut{
+            float: right;
+        }
+
+        .shortcut li{
+            float: left;
+            margin: 0px 5px;
+        }
+
+        /* 设置分割线 */
+        .shortcut .line{
+            width: 1px;
+            height: 10px;
+            background-color: #cccccc;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 创建外部容器 -->
+    <div class="top-bar-wrapper clearfix">
+        <!-- 创建内部容器 -->
+        <div class="top-bar">
+            <!-- 左侧菜单 -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">北京</a>
+                    <div class="loctionHidden">
+                        <div><a href="javascript:;">北京</a></div>
+                        <div><a href="javascript:;">上海</a></div>
+                        <div><a href="javascript:;">天津</a></div>
+                        <div><a href="javascript:;">重庆</a></div>
+                        <div><a href="javascript:;">河北</a></div>
+                        <div><a href="javascript:;">山西</a></div>
+                        <div><a href="javascript:;">河南</a></div>
+                        <div><a href="javascript:;">辽宁</a></div>
+                        <div><a href="javascript:;">吉林</a></div>
+                        <div><a href="javascript:;">黑龙江</a></div>
+                        <div><a href="javascript:;">内蒙古</a></div>
+                        <div><a href="javascript:;">江苏</a></div>
+                        <div><a href="javascript:;">山东</a></div>
+                        <div><a href="javascript:;">安徽</a></div>
+                        <div><a href="javascript:;">浙江</a></div>
+                        <div><a href="javascript:;">福建</a></div>
+                        <div><a href="javascript:;">湖北</a></div>
+                        <div><a href="javascript:;">湖南</a></div>
+                        <div><a href="javascript:;">广东</a></div>
+                        <div><a href="javascript:;">广西</a></div>
+                        <div><a href="javascript:;">江西</a></div>
+                        <div><a href="javascript:;">四川</a></div>
+                        <div><a href="javascript:;">海南</a></div>
+                        <div><a href="javascript:;">贵州</a></div>
+                        <div><a href="javascript:;">云南</a></div>
+                        <div><a href="javascript:;">西藏</a></div>
+                        <div><a href="javascript:;">陕西</a></div>
+                        <div><a href="javascript:;">甘肃</a></div>
+                        <div><a href="javascript:;">青海</a></div>
+                        <div><a href="javascript:;">宁夏</a></div>
+                        <div><a href="javascript:;">新疆</a></div>
+                        <div><a href="javascript:;">港澳</a></div>
+                        <div><a href="javascript:;">台湾</a></div>
+                        <div><a href="javascript:;">钓鱼岛</a></div>
+                        <div><a href="javascript:;">海外</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧菜单 -->
+            <ul class="shortcut">
+                <li><a href="javascript:;">你好，请登录</a></li>
+                <li><a href="javascript:;" class="hightlight"> 免费注册</a></li>
+                <!-- 分割线 -->
+                <li class="line"></li>
+                <li><a href="javascript:;">我的订单</a></li>
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li><a href="javascript:;">京东会员</a></li>
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;" class="hightlight">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <span>手机京东</span>
+                </li>
+                <li class="line"></li>
+                <li><a href="javascript:;">网站无障碍</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
