@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="../06_font&background/font/fontawesome/css/all.css">
+    <style>
+        body{
+            background-color: #efefed;
+        }
+
+        .clearfix::before,
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .film{
+            width: 300px;
+            margin: 50px auto;
+            background-color: #fcfffc;
+            color: #b4b7b4;
+            box-shadow:0 0 2px #dbdbd9;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .film .img{
+            width: 300px;
+        }
+
+        .introduce{
+            padding: 10px 20px;
+
+        }
+
+        .introduce .title{
+            color: #797b78;
+        }
+
+        .introduce .address{
+            font-size: 14px;
+            margin-bottom: 4px;
+            
+        }
+
+        .introduce .address::before{
+            content: "\f3c5";
+            font-family: "Font Awesome 6 Free";
+            font-size: 14px;
+            margin-right: 2px;
+        }
+
+        .introduce .describe{
+            font-size: 12px;
+        }
+
+        .bottom{
+            border-top: 1px #dbdbd9 solid;
+            padding: 10px 20px;
+        }
+
+        .star li{
+            float: left;
+            margin-right: 5px;
+            line-height: 30px;
+        }
+
+        .star li::before{
+            content: "\f005";
+            font-family: "Font Awesome 6 Free";
+
+        }
+
+        .star .active{
+            color: #b7cd44;
+        }
+
+        .logo{
+            float: right;
+        }
+
+        .logo::before{
+            content: "\f09a";
+            font-family: "Font Awesome 5 Brands";
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="film">
+        <div class="img">
+            <img src="./img/10/OIP-C.jpg" alt="iron man">
+        </div>
+        <div class="introduce">
+            <h2 class="title">钢铁侠3</h2>
+            <h3 class="address">美国</h3>
+            <p class="describe">
+                《钢铁侠3》是《钢铁侠》系列电影第三部，是由美国漫威影业公司出品的科幻动作电影，由沙恩·布莱克执导，小罗伯特·唐尼、格温妮斯·帕特洛、唐·钱德尔、盖·皮尔斯联合主演。
+            </p>
+        </div>
+        <div class="bottom clearfix">
+            <ul class="star">
+                <li class="active"></li>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="logo"></div>
+        </div>
+        
+    </div>
+</body>
+</html>
