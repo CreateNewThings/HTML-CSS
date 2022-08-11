@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .box1{
+        width: 500px;
+        height: 500px;
+        background-color: silver;
+        overflow: hidden;
+    }
+
+    .box1 div{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 100px;
+    }
+
+    .box2{
+        background-color: #bfa;
+
+        /* 
+            transition 过渡
+                通过过渡可以指定一个属性发生变化时的切换方式
+                通过过渡可以创建一些效果，提升用户的体验
+        */
+
+        /* 
+            transition-property 指定执行过渡的属性
+                多个属性之间使用 , 隔开
+                如果所有属性都需要过渡则使用all关键词
+                大部分属性都支持过渡效果,注意过渡时必须是从一个有效值向另一个有效值进行过渡
+         */
+         transition-property: all;
+        
+        /* 
+            transition-duration 指定过渡效果的时间
+                单位时间 s 和 ms, 1s = 1000ms
+                并且可以对不同的属性设置不同的时间
+        */
+        transition-duration: 2s;
+
+        /* 
+            transition-timing-function 过渡的时序函数
+                指定过渡的方式
+                可选值
+                    ease 默认值,慢速开始,先加速,再减速
+                    linear 匀速运动
+                    ease-in 加速运动
+                    ease-out 减速运动
+                    ease-in-out 先加速,后减速
+                    cubic-bezier() 贝塞尔曲线,用来指定时序函数
+                    https://cubic-bezier.com
+                    steps() 分布执行过渡效果
+                        可以设置第二个值:
+                            end 在时间结束时执行过渡(默认值)
+                            start 再时间开始时执行过渡
+
+        */
+        transition-timing-function: steps(3);
+
+
+        /* 
+            transition-delay 过渡效果的延迟
+        */
+        transition-delay: 1s;
+
+        /* 
+            transition 可以同时设置过渡相关的所有属性
+                没有特别的属性次序要求,但如果要写延迟属性,则应放到持续时间后
+        */
+        transition: all 2s ease;
+
+    }
+
+    .box3{
+        background-color: orange;
+        transition-property: all;
+        transition-duration: 2s;
+        transition-timing-function: cubic-bezier(0,1.4,1,-0.34);
+    }
+
+    .box1:hover div{
+        /* width: 200px;
+        height: 200px; */
+        /* background-color: orange; */
+        margin-left: 400px;
+    }
+</style>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

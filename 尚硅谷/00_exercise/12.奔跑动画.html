@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .run{
+            height: 256px;
+            width: 256px;
+            background-image: url(./img/12/bg2.png);
+            background-position: 0 0;
+            margin: 10px auto;
+            animation: runAnima 0.3s steps(5) infinite;
+        }
+
+        @keyframes runAnima{
+            from{
+                background-position: 0 0;
+            }
+
+            to{
+                background-position: -1280px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="run"></div>
+</body>
+</html>
