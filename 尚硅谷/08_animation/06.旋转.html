@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aliceblue;
+            border: 1px red solid;
+            /* 设置当前网页的视距为800px */
+            perspective: 800px;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 200px auto;
+            transition: 2s;
+        }
+
+        body:hover .box1{
+            /* 
+                通过旋转可以使元素沿着x y 或 z 轴旋转指定的角度
+                    rotateX()
+                    rotateY()
+                    rotateZ()
+                设置视距会让rotateY() rotateZ()有透视效果
+            */
+            /* transform: rotateZ(45deg); */
+            /* transform: rotateY(180deg) translateZ(400px); */
+            /* transform: translateZ(400px) rotateY(180deg); */
+            transform: rotateY(180deg);
+            /* 是否显示元素背面 */
+            backface-visibility: hidden;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
