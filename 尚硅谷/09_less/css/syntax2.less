@@ -1,0 +1,82 @@
+.box1{
+    .box2{
+        color: red;
+    }
+
+    >.box3{
+        color: red;
+    }
+
+    // 为box1设置一个hover
+    // & 表示外层父元素
+    &:hover{
+        color: orange;
+    }
+}
+
+.p1{
+    width: 100px;
+    height: 100px;
+}
+
+// .p2{
+//     width: 100px;
+//     height: 100px;
+//     color: red;
+// }
+//:extend() 对当前选择器扩展指定选择器的样式(选择器分组)
+//理论上较混合性能较好
+.p2:extend(.p1){
+    color: red;
+}
+
+.p3{
+    // 直接对指定样式进行引用(mixin 混合)
+    .p1();
+}
+
+// 使用类选择器时可以在选择器后添加一个括号,相对于创建一个mixin, 直接写不编译到css中
+.p4(){
+    width: 100px;
+    height: 100px;
+    background-color: #bfa;
+}
+
+.p5{
+    .p4();
+}
+
+//混合函数 在混合函数中可以设置变量(可以设置参数默认值)
+.test(@w:100px,@h:300px,@c:red){
+    width: @w;
+    height: @h;
+    border: 1px @c solid;
+}
+
+.box4{
+    //调用混合函数,按顺序传参
+    .test(100px,100px,#bfa);
+    // 写参数时带参数名可以不按顺序
+    .test(@c:#bfa,@w: 100px,@h:100px);
+}
+
+// less内置许多混合函数
+.box5{
+    // 取平均颜色
+    background-color: average(#bfa,red);
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: #bfa;
+    transition: 2s;
+    &:hover{
+        background-color: darken(#bfa,20%);
+    }
+}
