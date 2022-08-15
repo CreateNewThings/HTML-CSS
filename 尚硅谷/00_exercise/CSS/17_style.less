@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+// 设计图宽度
+@total-width: 750;
+@bg_color: #eff0f4;
+
+.w{
+    width: (690/40rem);
+    margin: 0 auto;
+}
+//设置根元素
+html{
+    // 设置rem比值
+    font-size: (100vw/@total-width) * 40;
+    background-color: @bg_color;
+}
+
+a{
+    text-decoration: none;
+}
+
+//设置头部header
+.top-bar:extend(.w){
+    //设置弹性容器
+    display: flex;
+    // 设置高度
+    height: (175/40rem);
+    // 设置对齐方式
+    justify-content: space-between;
+    // 设置辅轴的对齐
+    align-items: center;
+    line-height: (175/40rem);
+    a{
+        color: #24253d;
+        font-size: (50/40rem);
+        
+        display: flex;
+        i{
+        color: #999;
+        font-size: (45/40rem);
+        }
+    }
+}
+
+// 设置banner
+.banner:extend(.w){
+    display: flex;
+    border-radius: (20/40rem);
+    position: relative;
+    overflow: hidden;
+
+    a{
+        height: (275/40rem);
+
+        img{
+            position: absolute;
+            top: (-150/40rem);
+            width: 100%;
+        }
+    }
+    
+}
+
+// 设置menu
+.menu:extend(.w){
+    // 设置高度
+    height: (320/40rem);
+    // 设置弹性盒
+    display: flex;
+    // 设置排列和换行
+    flex-flow: row wrap;
+    // 设置元素间隙
+    justify-content: space-between;
+    align-content: space-evenly;
+    a{
+        color: #fff;
+        font-size: (30/40rem);
+        width: (330/40rem);
+        height: (110/40rem);
+        border-radius: (20/40rem);
+        background-size: cover;
+        background-position: center;
+        line-height: (110/40rem);
+        &:nth-child(1){
+            background-image: url(../img/17/My\ Courses.png);
+        }
+        &:nth-child(2){
+            background-image: url(../img/17/Star\ Teacher.png);
+        }
+
+        &:nth-child(3){
+            background-image: url(../img/17/subscription.png);
+        }
+        &:nth-child(4){
+            background-image: url(../img/17/My\ Download.png);
+        }
+        
+        i{
+            margin: 0 (20/40rem) 0 (35/40rem);
+        }
+    }
+}
+
+// 设置课程列表
+.courseList:extend(.w){
+    display: flex;
+    flex-flow: column;
+    height: (400/40rem);
+    justify-content: space-between;
+    margin-top: (10/40rem);
+    .title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .left_title{
+            border-left: (2/40rem) solid #3a84ff;
+            font-size: (35/40rem);
+            padding-left: (20/40rem);
+        }
+        
+        .more{
+            font-size: (28/40rem);
+            color: #656565;
+        }
+    }
+
+    .itemList{
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        width: (720/40rem);
+        height: (340/40rem);
+        .item{
+            flex: none;
+            display: flex;
+            flex-direction: column;
+            width: (320/40rem);
+            height: (325/40rem);
+            background-color: #fff;
+            border-radius: (15/40rem);
+            box-shadow: 0 0 (5/40rem) #b2b2b2;
+            justify-content: space-around;
+            margin: (5/40rem) (15/40rem) (5/40rem) (10/40rem);
+            
+            .cover{
+                width: (285/40rem);
+                height: (155/40rem);
+                overflow: hidden;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+
+            .courseName{
+                height: (35/40rem);
+                color: #24253d;
+                font-size: (32/40rem);
+                margin-left: (20/40rem);
+            }
+
+            .teacherName{
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                font-size: (25/40rem);
+
+                .avatar{
+                    width: (40/40rem);
+                    height: (40/40rem);
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 0 (20/40rem) 0 (20/40rem);
+                    position: relative;
+                    img{
+                        width: 150%;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+                }
+                
+                .nickname{
+                    color: #969393;
+                }
+            }
+        }
+    }
+}

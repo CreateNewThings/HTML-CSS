@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <style>
+        .menu{
+            width: 1210px;
+            height: 48px;
+            margin: 100px auto;
+            background-color: #e8e7e3;
+            /* 设置为弹性容器 */
+            display: flex;
+        }
+
+        .item{
+            height: 100%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            color: #878787;
+            /* 设置增长系数 */
+            flex-grow: 1;
+        }
+
+        .item:hover{
+            background-color: #3f3f3f;
+            color: #e8e7e3;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <a href="javascript:;" class="item">HTML/CSS</a>
+        <a href="javascript:;" class="item">Brower Side</a>
+        <a href="javascript:;" class="item">Server Side</a>
+        <a href="javascript:;" class="item">Programming</a>
+        <a href="javascript:;" class="item">XML</a>
+        <a href="javascript:;" class="item">Web Building</a>
+        <a href="javascript:;" class="item">Reference</a>   
+    </nav>
+</body>
+</html>
