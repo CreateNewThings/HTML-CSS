@@ -105,7 +105,6 @@ a {
   flex-direction: row;
   overflow: auto;
   width: 18rem;
-  height: 8.5rem;
 }
 .courseList .itemList .item {
   flex: none;
